@@ -7,7 +7,7 @@ PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 
 echo "================================="
-echo " Jellyfin DevOps Setup"
+echo " Jellyfin Server Setup"
 echo "================================="
 
 
@@ -34,6 +34,12 @@ echo "[INFO] Starting Jellyfin..."
 
 "$PROJECT_ROOT/scripts/start.sh"
 
+
+echo
+echo "Running infrastructure health check..."
+echo
+
+"$PROJECT_ROOT/scripts/status.sh"
 
 echo ""
 echo "================================="
