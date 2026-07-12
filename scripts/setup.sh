@@ -24,10 +24,13 @@ then
     exit 1
 fi
 
+echo "[INFO] Checking for updates..."
+
+"$PROJECT_ROOT/scripts/update.sh"
 
 echo "[INFO] Downloading demo media..."
 
-"$PROJECT_ROOT/scripts/download-demo-media.sh"
+"$PROJECT_ROOT/scripts/download-media.sh"
 
 
 echo "[INFO] Starting Jellyfin..."
@@ -46,5 +49,6 @@ echo "================================="
 echo " Setup completed!"
 echo ""
 echo " Open:"
-echo " http://localhost:8096"
+echo " Jellyfin -> http://localhost:8096"
+echo " Grafana -> http://localhost:3000"
 echo "================================="

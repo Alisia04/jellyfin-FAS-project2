@@ -16,7 +16,7 @@ echo "[INFO] Removing generated data..."
 
 rm -rf "$PROJECT_ROOT/config"
 rm -rf "$PROJECT_ROOT/cache"
-rm -rf "$PROJECT_ROOT/media/Movies/BigBuckBunny.mp4"
+rm -rf "$PROJECT_ROOT/media/movies/Big\ Buck\ Bunny.mp4"
 
 
 echo "[SUCCESS] Cleanup completed."
