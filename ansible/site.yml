@@ -1,0 +1,47 @@
+---
+- name: Configure Jellyfin infrastructure
+  hosts: local
+  become: yes
+
+  tasks:
+
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+
+    - name: Install required packages
+      apt:
+        name:
+          - docker.io
+          - docker-compose-plugin
+        state: present
+
+
+    - name: Enable Docker service
+      systemd:
+        name: docker
+        enabled: yes
+        state: started
+    
+    - name: Create project directories
+      file:
+        path: "{{ item }}"
+        state: directory
+        owner: "{{ ansible_user }}"
+        mode: '0755'
+
+      loop:
+        - /opt/jellyfin
+        - /opt/jellyfin/config
+        - /opt/jellyfin/cache
+        - /opt/jellyfin/media
+
+    - name: Copy docker compose file
+      copy:
+        src: ../docker/docker-compose.yml
+        dest: /opt/jellyfin/docker-compose.yml
+
+    - name: Start Jellyfin stack
+      community.docker.docker_compose_v2:
+        project_src: /opt/jellyfin
