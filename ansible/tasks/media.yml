@@ -1,0 +1,5 @@
+---
+- name: Download demo media
+  command: ../scripts/download-demo-media.sh
+  args:
+    chdir: "{{ playbook_dir }}"
