@@ -1,0 +1,12 @@
+apiVersion: 1.0
+
+providers:
+
+  - name: Jellyfin
+    orgId: 1
+    folder: Jellyfin
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 10
+    options:
+      path: /var/lib/grafana/dashboards
