@@ -49,6 +49,10 @@ Open the following links for:
 - Grafana: http://localhost:3000
 - Prometheus: http://localhost:9090
 - cAdvisor: http://localhost:8080
+
+To stop the container, run `stop.sh`.
+To start again the container, you can use Ansible (see setup option 1) or `start.sh`.
+To clean the environmenti, use `cleanup.sh`. If you want to maintain the current configurations, ensure to run `backup.sh` before.
 - - - 
 ## Author:
 Alisia Wegher
