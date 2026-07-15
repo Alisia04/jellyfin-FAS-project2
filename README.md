@@ -40,9 +40,11 @@ ansible-playbook site.yml
 #### Option 2: use "setup.sh"
 If the Ansible script doesn't work or Ansible is not installed on the machine, you can use this.
 ```
+chmod 755 ./scripts/*
 ./scripts/setup.sh
 ```
-This script triggers `update.sh`, `download-media.sh`, `start.sh`, `status.sh`
+This script triggers `update.sh`, `download-media.sh`, `start.sh`, `status.sh`.
+755 means the owner has read, write and execute permissions, but group and others have only read and execute.
 ### Guide to use:
 Open the following links for:
 - Jellyfin: http://localhost:8096
@@ -51,7 +53,7 @@ Open the following links for:
 - cAdvisor: http://localhost:8080
 
 To stop the container, run `stop.sh`.
-To start again the container, you can use Ansible (see setup option 1) or `start.sh`.
+To restart the container, you can use Ansible (see setup option 1) or `restart.sh`.
 To clean the environmenti, use `cleanup.sh`. If you want to maintain the current configurations, ensure to run `backup.sh` before.
 - - - 
 ## Author:
