@@ -42,7 +42,7 @@ If the Ansible script doesn't work or Ansible is not installed on the machine, y
 ```
 ./scripts/setup.sh
 ```
-This script triggers `update.sh`, `download-media.sh`
+This script triggers `update.sh`, `download-media.sh`, `start.sh`, `status.sh`
 ### Guide to use:
 Open the following links for:
 - Jellyfin: http://localhost:8096
