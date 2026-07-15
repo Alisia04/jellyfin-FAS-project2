@@ -1,0 +1,13 @@
+# Obsidian
+.obsidian/
+
+# Docker / Jellyfin
+config/
+cache/
+media/*
+!media/Movies/
+!media/TV Shows/
+!.gitkeep
+
+# Eventuali backup
+backup/

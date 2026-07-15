@@ -1,0 +1,21 @@
+---
+- name: Deploy Jellyfin Infrastructure
+  hosts: local
+  become: false
+
+  tasks:
+
+    - name: Check prerequisites
+      import_tasks: tasks/checks.yml
+
+    - name: Create project directories
+      import_tasks: tasks/directories.yml
+
+    - name: Download demo media
+      import_tasks: tasks/media.yml
+
+    - name: Start Docker infrastructure
+      import_tasks: tasks/docker.yml
+
+    - name: Deployment summary
+      import_tasks: tasks/summary.yml
