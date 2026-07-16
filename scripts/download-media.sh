@@ -5,10 +5,10 @@ set -e
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 MEDIA_DIR="$PROJECT_ROOT/media"
-MOVIES_DIR="$MEDIA_DIR/Movies"
+MOVIES_DIR="$MEDIA_DIR/movies"
 
 VIDEO_URL="https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
-VIDEO_FILE="$MOVIES_DIR/BigBuckBunny.mp4"
+VIDEO_FILE="$MOVIES_DIR/Big Buck Bunny.mp4"
 
 
 echo "[INFO] Creating media directories..."
