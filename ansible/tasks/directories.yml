@@ -1,12 +1,12 @@
 ---
 - name: Ensure Movies directory exists
   file:
-    path: "{{ playbook_dir }}/../media/Movies"
+    path: "{{ playbook_dir }}/../media/movies"
     state: directory
 
 - name: Ensure TV Shows directory exists
   file:
-    path: "{{ playbook_dir }}/../media/TV Shows"
+    path: "{{ playbook_dir }}/../media/TVseries"
     state: directory
 
 - name: Ensure config directory exists
